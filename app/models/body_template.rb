@@ -1,0 +1,2 @@
+class BodyTemplate < ApplicationRecord
+end
