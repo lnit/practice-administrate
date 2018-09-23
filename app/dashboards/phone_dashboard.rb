@@ -10,6 +10,7 @@ class PhoneDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     message: Field::BelongsTo,
     id: Field::Number,
+    status: Field::String.with_options(searchable: false),
     number: Field::String,
     body: Field::String,
     company_code: Field::String,
@@ -26,8 +27,8 @@ class PhoneDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :message,
     :id,
+    :status,
     :number,
-    :body,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,6 +36,7 @@ class PhoneDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :message,
     :id,
+    :status,
     :number,
     :body,
     :company_code,
@@ -48,6 +50,7 @@ class PhoneDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :message,
+    :status,
     :number,
     :body,
     :company_code,

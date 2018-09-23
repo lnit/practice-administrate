@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2018_09_22_135359) do
   end
 
   create_table "phones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "status", default: 0, null: false
     t.string "number"
     t.string "body"
     t.string "company_code"
