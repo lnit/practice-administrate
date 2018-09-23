@@ -9,6 +9,7 @@ class BodyTemplateDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    name: Field::String,
     body: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -21,15 +22,16 @@ class BodyTemplateDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
+    :name,
     :body,
     :created_at,
-    :updated_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
+    :name,
     :body,
     :created_at,
     :updated_at,
@@ -39,6 +41,7 @@ class BodyTemplateDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :name,
     :body,
   ].freeze
 
