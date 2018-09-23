@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   namespace :admin do
       resources :body_templates
-      resources :messages
+      resources :messages do
+        member do
+          post 'smash'
+        end
+      end
       resources :phones
 
       root to: "body_templates#index"

@@ -17,5 +17,9 @@ module Admin
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
+
+    def smash
+      redirect_to action: :show
+    end
   end
 end
