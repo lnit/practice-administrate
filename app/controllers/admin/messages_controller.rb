@@ -19,6 +19,7 @@ module Admin
     # for more information
 
     def smash
+      SmashMessageJob.perform_later(params[:id])
       redirect_to action: :show
     end
   end

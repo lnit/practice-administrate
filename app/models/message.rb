@@ -16,4 +16,13 @@ class Message < ApplicationRecord
       phone.body = self.body_template.body % row_hash.symbolize_keys
     end
   end
+
+  def smash!
+    self.phones.find_each do |phone|
+      phone.processing!
+      sleep 2
+      phone.success!
+      sleep 1
+    end
+  end
 end
